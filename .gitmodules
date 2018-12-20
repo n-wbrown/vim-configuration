@@ -1,0 +1,12 @@
+[submodule "pack/my-plugins/start/vim-monokai-1"]
+	path = pack/my-plugins/start/vim-monokai-1
+	url = https://github.com/n-wbrown/vim-monokai-1.git
+[submodule "pack/my-plugins/start/python-syntax"]
+	path = pack/my-plugins/start/python-syntax
+	url = https://github.com/n-wbrown/python-syntax.git
+[submodule "pack/my-plugins/start/vim-nefertiti"]
+	path = pack/my-plugins/start/vim-nefertiti
+	url = https://github.com/n-wbrown/vim-nefertiti.git
+[submodule "pack/my-plugins/start/gruvbox"]
+	path = pack/my-plugins/start/gruvbox
+	url = https://github.com/n-wbrown/gruvbox.git

@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/nolan'
+let g:netrw_dirhist_2='/Users/nolan/.vim'
+let g:netrw_dirhist_3='/Users/nolan'
+let g:netrw_dirhist_4='/Users/nolan/.vim'
+let g:netrw_dirhist_5='/Users/nolan/.vim/pack'
+let g:netrw_dirhist_6='/Users/nolan/.vim/pack/my-plugins'
+let g:netrw_dirhist_7='/Users/nolan/.vim/pack'
+let g:netrw_dirhist_8='/Users/nolan/.vim'
