@@ -13,3 +13,6 @@
 [submodule "pack/my-plugins/opt/vim-airline"]
 	path = pack/my-plugins/opt/vim-airline
 	url = git@github.com:n-wbrown/vim-airline.git
+[submodule "pack/my-plugins/start/coc.nvim"]
+	path = pack/my-plugins/start/coc.nvim
+	url = git@github.com:n-wbrown/coc.nvim.git
