@@ -99,6 +99,7 @@ map <S-Down> g<Down>
 "imap <S-Down> <C-[> g<Down> i
 
 if has("gui_running")
+    autocmd GUIEnter * set vb t_vb=
    set guioptions-=m
    set guioptions-=T
    set guioptions-=r
