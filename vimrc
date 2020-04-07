@@ -16,8 +16,10 @@ set textwidth=79
 "set breakindent
 set colorcolumn=80
 
-" Allow text folding, don't overthink it
+" Use system clipboard for yanks
+set clipboard=unnamed
 
+" Allow text folding, don't overthink it
 set foldmethod=indent
 
 " cmd + j is ESC in many modes 
