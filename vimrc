@@ -51,6 +51,11 @@ color monokai
 colorscheme monokai
 hi Search cterm=NONE ctermfg=NONE ctermbg=red
 hi Search gui=NONE guifg=NONE guibg=yellow
+" for crusoexia monokai variant
+"set termguicolors
+"set t_Co=256
+let g:monokai_term_italic = 1
+let g:monokai_gui_italic = 1
 
 " Airline settings 
 set noshowmode
