@@ -1,21 +1,21 @@
 [submodule "pack/my-plugins/start/vim-monokai-1"]
 	path = pack/my-plugins/start/vim-monokai-1
-	url = https://github.com/n-wbrown/vim-monokai-1.git
+	url = https://github.com/sickill/vim-monokai.git
 [submodule "pack/my-plugins/start/python-syntax"]
 	path = pack/my-plugins/start/python-syntax
-	url = https://github.com/n-wbrown/python-syntax.git
+	url = https://github.com/jeetsukumaran/vim-nefertiti.git
 [submodule "pack/my-plugins/start/vim-nefertiti"]
 	path = pack/my-plugins/start/vim-nefertiti
-	url = https://github.com/n-wbrown/vim-nefertiti.git
+	url = https://github.com/jeetsukumaran/vim-nefertiti.git
 [submodule "pack/my-plugins/start/gruvbox"]
 	path = pack/my-plugins/start/gruvbox
-	url = https://github.com/n-wbrown/gruvbox.git
+	url = https://github.com/morhetz/gruvbox.git
 [submodule "pack/my-plugins/opt/vim-airline"]
 	path = pack/my-plugins/opt/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule "pack/my-plugins/start/coc.nvim"]
 	path = pack/my-plugins/start/coc.nvim
-	url = git@github.com:n-wbrown/coc.nvim.git
+	url = https://github.com/neoclide/coc.nvim.git
 [submodule "pack/my-plugins/start/vim-monokai"]
 	path = pack/my-plugins/start/vim-monokai
 	url = https://github.com/crusoexia/vim-monokai.git
