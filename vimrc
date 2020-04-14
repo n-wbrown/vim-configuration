@@ -12,9 +12,26 @@ set smartcase
 "Automatically detect and reload a file when it is altered by another program
 set autoread
 
-set textwidth=79
-"set breakindent
-set colorcolumn=80
+"filetype plugin on 
+"autocmd Filetype python
+"    \ set textwidth=79
+"    "set breakindent
+"    \ set colorcolumn=80
+"    \ set linebreak "break on reasonable characters (spaces)
+
+" for managing long strings of text and text wrapping
+map j gj
+map k gk
+map <Up> g<Up>
+map <Down> g<Down>
+imap <Up> <C-o>g<Up>
+imap <Down> <C-o>g<Down>
+"imap <S-Up> <C-[> g<Up> i
+"imap <S-Down> <C-[> g<Down> i
+"map <S-Up> g<Up>
+"map <S-Down> g<Down>
+"imap <S-Up> <C-[> g<Up> i
+"imap <S-Down> <C-[> g<Down> i
 
 " Use system clipboard for yanks
 set clipboard=unnamed
@@ -94,14 +111,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "let g:airline_right_alt_sep = '|'
 
 " gui vim settings
-" for managing long strings of text and text wrapping
-set linebreak "break on reasonable characters (spaces)
-map j gj
-map k gk
-map <S-Up> g<Up>
-map <S-Down> g<Down>
-"imap <S-Up> <C-[> g<Up> i
-"imap <S-Down> <C-[> g<Down> i
 
 if has("gui_running")
     autocmd GUIEnter * set vb t_vb=
