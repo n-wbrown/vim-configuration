@@ -12,12 +12,12 @@ set smartcase
 "Automatically detect and reload a file when it is altered by another program
 set autoread
 
-"filetype plugin on 
-"autocmd Filetype python
-"    \ set textwidth=79
+filetype plugin on 
+autocmd Filetype python setlocal
+    \ colorcolumn=80
+    \ textwidth=79
+    \ linebreak "break on reasonable characters (spaces)
 "    "set breakindent
-"    \ set colorcolumn=80
-"    \ set linebreak "break on reasonable characters (spaces)
 
 " for managing long strings of text and text wrapping
 map j gj
