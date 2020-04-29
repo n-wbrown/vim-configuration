@@ -9,7 +9,7 @@ set smarttab
 set ignorecase
 set smartcase
 
-"Automatically detect and reload a file when it is altered by another program
+"Aut\omatically detect and reload a file when it is altered by another program
 set autoread
 
 filetype plugin on 
@@ -18,14 +18,63 @@ autocmd Filetype python setlocal
     \ textwidth=79
     \ linebreak "break on reasonable characters (spaces)
 "    "set breakindent
-
 " for managing long strings of text and text wrapping
-map j gj
-map k gk
-map <Up> g<Up>
-map <Down> g<Down>
-imap <Up> <C-o>g<Up>
-imap <Down> <C-o>g<Down>
+let mapleader = "\\"
+" from https://vim.fandom.com/wiki/Move_cursor_by_display_lines_when_wrapping
+noremap <silent> <Leader>w :call ToggleWrap()<CR>
+"let wrappersetting = 0
+function ToggleWrap()
+  if !exists("b:wrappersetting")
+    let b:wrappersetting = 0
+  endif
+  "if &wrap
+  if b:wrappersetting == 1
+    let b:wrappersetting = 0
+    echo "Wrap OFF"
+    setlocal nowrap
+    set virtualedit=all
+    silent! nunmap <buffer> <Up>
+    silent! nunmap <buffer> <Down>
+    silent! nunmap <buffer> <Home>
+    silent! nunmap <buffer> <End>
+    silent! iunmap <buffer> <Up>
+    silent! iunmap <buffer> <Down>
+    silent! iunmap <buffer> <Home>
+    silent! iunmap <buffer> <End>
+  else
+    let b:wrappersetting = 1
+    echo "Wrap ON"
+    setlocal wrap linebreak nolist
+    set virtualedit=
+    setlocal display+=lastline
+    noremap  <buffer> <silent> <Up>   gk
+    noremap  <buffer> <silent> <Down> gj
+    noremap  <buffer> <silent> <Home> g<Home>
+    noremap  <buffer> <silent> <End>  g<End>
+    inoremap <buffer> <silent> <Up>   <C-o>gk
+    inoremap <buffer> <silent> <Down> <C-o>gj
+    inoremap <buffer> <silent> <Home> <C-o>g<Home>
+    inoremap <buffer> <silent> <End>  <C-o>g<End>
+  endif
+endfunction
+
+
+
+"noremap j gj
+"noremap k gk
+"noremap <Up> g<Up>
+"noremap <Down> g<Down>
+"imap <A-Up> <C-o>g<Up>
+"imap <A-Down> <C-o>g<Down>
+"imap <A-Up> <C-o>g<Up>
+"imap <A-Down> <C-o>g<Down>
+"inoremap <S-Up> <C-o>g<Up>
+"inoremap <S-Down> <C-o>g<Down>
+"imap <Leader><Up> <C-o>k
+"imap <Leader><Down> <C-o>j
+
+
+
 "imap <S-Up> <C-[> g<Up> i
 "imap <S-Down> <C-[> g<Down> i
 "map <S-Up> g<Up>
