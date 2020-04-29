@@ -18,6 +18,19 @@ autocmd Filetype python setlocal
     \ textwidth=79
     \ linebreak "break on reasonable characters (spaces)
 "    "set breakindent
+
+
+" reminder on scope:
+" https://github.com/JarrodCTaylor/vim-plugin-starter-kit/wiki/Working-with-VimScript-variables
+" g:var - global.
+" a:var - function argument.
+" l:var - local to function.
+" b:var - local to buffer.
+" w:var - local to window.
+" t:var - local to tab.
+" v:var - Predefined by Vim.
+
+
 " for managing long strings of text and text wrapping
 let mapleader = "\\"
 " from https://vim.fandom.com/wiki/Move_cursor_by_display_lines_when_wrapping
