@@ -1,5 +1,5 @@
 [submodule "pack/my-plugins/start/vim-monokai-1"]
-	path = pack/my-plugins/start/vim-monokai-1
+	path = pack/my-plugins/opt/vim-monokai-1
 	url = https://github.com/sickill/vim-monokai.git
 [submodule "pack/my-plugins/start/python-syntax"]
 	path = pack/my-plugins/start/python-syntax
@@ -17,5 +17,5 @@
 	path = pack/my-plugins/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
 [submodule "pack/my-plugins/start/vim-monokai"]
-	path = pack/my-plugins/start/vim-monokai
+	path = pack/my-plugins/opt/vim-monokai
 	url = https://github.com/crusoexia/vim-monokai.git
