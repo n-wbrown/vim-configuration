@@ -1,3 +1,3 @@
 *.swp
 .netrwhist
-
+local_settings.vim

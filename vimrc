@@ -126,18 +126,28 @@ set hlsearch
 " Enable vim-airline
 packadd vim-airline
 
+
+if filereadable("local_settings.vim")
+  source local_settings.vim
+  echo "using local_settings.vim"
+else
+  " use monokai colorscheme, fix some weird colors. 
+  color monokai
+  colorscheme monokai
+  hi Search cterm=NONE ctermfg=NONE ctermbg=red
+  hi Search gui=NONE guifg=NONE guibg=yellow
+  
+  " for crusoexia monokai variant
+  "set termguicolors
+  "set t_Co=256
+  let g:monokai_term_italic = 1
+  let g:monokai_gui_italic = 1
+endif
+
+
+
 set guifont=Menlo:h13
 
-" use monokai colorscheme, fix some weird colors. 
-color monokai
-colorscheme monokai
-hi Search cterm=NONE ctermfg=NONE ctermbg=red
-hi Search gui=NONE guifg=NONE guibg=yellow
-" for crusoexia monokai variant
-"set termguicolors
-"set t_Co=256
-let g:monokai_term_italic = 1
-let g:monokai_gui_italic = 1
 
 " Airline settings 
 set noshowmode
