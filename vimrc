@@ -133,7 +133,7 @@ let local_settings_file = expand('<sfile>:p:h') . '/local_settings.vim'
 if filereadable(local_settings_file)
   "source local_settings_file
   execute 'source ' . fnameescape(local_settings_file)
-  echo "using " . local_settings_file
+  "echo "using " . local_settings_file
 else
   " use monokai colorscheme, fix some weird colors. 
   color monokai
