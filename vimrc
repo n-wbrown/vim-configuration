@@ -125,6 +125,7 @@ set hlsearch
 
 " Enable vim-airline
 packadd vim-airline
+packadd vim-airline-themes
 
 
 " echo expand('<sfile>:p:h:h')
