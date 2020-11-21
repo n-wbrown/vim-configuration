@@ -3,7 +3,7 @@
 	url = https://github.com/sickill/vim-monokai.git
 [submodule "pack/my-plugins/start/python-syntax"]
 	path = pack/my-plugins/start/python-syntax
-	url = https://github.com/jeetsukumaran/vim-nefertiti.git
+	url = https://github.com/vim-python/python-syntax.git
 [submodule "pack/my-plugins/start/vim-nefertiti"]
 	path = pack/my-plugins/start/vim-nefertiti
 	url = https://github.com/jeetsukumaran/vim-nefertiti.git
