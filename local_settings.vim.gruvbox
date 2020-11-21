@@ -1,3 +1,4 @@
 colorscheme gruvbox
 set background=dark
 let g:coc_disable_startup_warning = 1
+set t_Co=256

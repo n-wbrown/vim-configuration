@@ -128,29 +128,6 @@ packadd vim-airline
 packadd vim-airline-themes
 
 
-" echo expand('<sfile>:p:h:h')
-let local_settings_file = expand('<sfile>:p:h') . '/local_settings.vim'
-
-if filereadable(local_settings_file)
-  "source local_settings_file
-  execute 'source ' . fnameescape(local_settings_file)
-  "echo "using " . local_settings_file
-else
-  " use monokai colorscheme, fix some weird colors. 
-  color monokai
-  colorscheme monokai
-  hi Search cterm=NONE ctermfg=NONE ctermbg=red
-  hi Search gui=NONE guifg=NONE guibg=yellow
-  
-  " for crusoexia monokai variant
-  "set termguicolors
-  "set t_Co=256
-  let g:monokai_term_italic = 1
-  let g:monokai_gui_italic = 1
-endif
-
-
-
 set guifont=Menlo:h13
 
 
@@ -162,7 +139,7 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts=1
 
-let g:airline_theme='dark'
+let g:airline_theme='onedark'
 
 let g:python_highlight_all = 1
 let g:python_highlight_indent_errors = 0
@@ -198,4 +175,26 @@ if has("gui_running")
    set guioptions-=T
    set guioptions-=r
    set guioptions-=L
+endif
+
+
+" echo expand('<sfile>:p:h:h')
+let local_settings_file = expand('<sfile>:p:h') . '/local_settings.vim'
+
+if filereadable(local_settings_file)
+  "source local_settings_file
+  execute 'source ' . fnameescape(local_settings_file)
+  "echo "using " . local_settings_file
+else
+  " use monokai colorscheme, fix some weird colors. 
+  color monokai
+  colorscheme monokai
+  hi Search cterm=NONE ctermfg=NONE ctermbg=red
+  hi Search gui=NONE guifg=NONE guibg=yellow
+  
+  " for crusoexia monokai variant
+  "set termguicolors
+  set t_Co=256
+  let g:monokai_term_italic = 1
+  let g:monokai_gui_italic = 1
 endif
