@@ -125,6 +125,7 @@ set hlsearch
 
 " Enable vim-airline
 packadd vim-airline
+packadd vim-airline-themes
 
 
 if filereadable("local_settings.vim")
