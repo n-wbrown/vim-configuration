@@ -1,4 +1,5 @@
-set autoindent
+s
+zRt autoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -139,7 +140,7 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts=1
 
-let g:airline_theme='onedark'
+let g:airline_theme='fruit_punch'
 
 let g:python_highlight_all = 1
 let g:python_highlight_indent_errors = 0
