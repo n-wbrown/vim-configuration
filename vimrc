@@ -100,6 +100,7 @@ set clipboard=unnamed
 
 " Allow text folding, don't overthink it
 set foldmethod=indent
+set foldignore=
 
 " cmd + j is ESC in many modes 
 inoremap <D-j> <ESC>
