@@ -160,8 +160,9 @@ inoremap <silent><expr> <Tab>
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <CR> pumvisible() ? coc#_select_confirm() : "<CR>"
-
-
+" use the following if you don't want to automatically select the first
+" suggested option
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "<CR>"
 
 "let g:airline_left_sep=''
 "let g:airline_right_sep=''
