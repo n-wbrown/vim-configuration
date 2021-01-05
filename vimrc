@@ -102,16 +102,19 @@ set clipboard=unnamed
 set foldmethod=indent
 set foldignore=
 
+" Describe how to illustrate invisible chars when 'set list' is invoked 
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
 " cmd + j is ESC in many modes 
-inoremap <D-j> <ESC>
-nnoremap <D-j> <ESC>
-vnoremap <D-j> <ESC>
-noremap <D-j> <ESC>
+inoremap <C-j> <ESC>
+nnoremap <C-j> <ESC>
+vnoremap <C-j> <ESC>
+noremap <C-j> <ESC>
 
 " Enable syntax
 syntax on
-onoremap <D-j> <ESC>
-cnoremap <D-j> <ESC>
+onoremap <C-j> <ESC>
+cnoremap <C-j> <ESC>
 "
 set ttimeout		" time out for key codes
 set ttimeoutlen=1	" wait up to 100ms after Esc for special key
