@@ -19,6 +19,11 @@ autocmd Filetype python setlocal
     \ linebreak "break on reasonable characters (spaces)
 "    "set breakindent
 
+autocmd Filetype javascript,javascriptreact,typescript,typescriptreact,html setlocal
+    \ tabstop=2
+    \ shiftwidth=2
+    \ linebreak "break on reasonable characters (spaces)
+
 
 " reminder on scope:
 " https://github.com/JarrodCTaylor/vim-plugin-starter-kit/wiki/Working-with-VimScript-variables
