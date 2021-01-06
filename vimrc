@@ -1,3 +1,8 @@
+au BufNewFile,BufRead *.ts     setf typescript 
+au BufNewFile,BufRead *.tsx    setf typescriptreact
+au BufNewFile,BufRead *.jsx    setf javascriptreact
+
+
 set autoindent
 set tabstop=4
 set shiftwidth=4
@@ -19,7 +24,7 @@ autocmd Filetype python setlocal
     \ linebreak "break on reasonable characters (spaces)
 "    "set breakindent
 
-autocmd Filetype javascript,javascriptreact,typescript,typescriptreact,html setlocal
+autocmd Filetype javascript,javascriptreact,typescript,typescriptreact,html,json,yaml setlocal
     \ tabstop=2
     \ shiftwidth=2
     \ linebreak "break on reasonable characters (spaces)
