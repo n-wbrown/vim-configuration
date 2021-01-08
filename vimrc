@@ -8,6 +8,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
+set backspace=indent,eol,start
 
 " line width helpers for python. Consider making this lang dependent
 "Searches are case sensitive IFF I use caps. For manually searching: \c* \C*
