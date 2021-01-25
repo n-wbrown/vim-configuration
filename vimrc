@@ -25,7 +25,7 @@ autocmd Filetype python setlocal
     \ linebreak "break on reasonable characters (spaces)
 "    "set breakindent
 
-autocmd Filetype javascript,javascriptreact,typescript,typescriptreact,html,json,yaml setlocal
+autocmd Filetype javascript,javascriptreact,typescript,typescriptreact,html,json,yaml,scss,sass setlocal
     \ tabstop=2
     \ shiftwidth=2
     \ linebreak "break on reasonable characters (spaces)
