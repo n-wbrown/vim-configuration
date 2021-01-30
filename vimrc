@@ -17,6 +17,8 @@ set smartcase
 
 "Aut\omatically detect and reload a file when it is altered by another program
 set autoread
+set cursorline
+
 
 filetype plugin on 
 autocmd Filetype python setlocal
