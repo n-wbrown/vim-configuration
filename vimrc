@@ -118,6 +118,9 @@ set foldignore=
 " Describe how to illustrate invisible chars when 'set list' is invoked 
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
+" allow dashes in auto-completed names
+set iskeyword+=\-
+
 " use ctrl+H and ctrl+L to jump to the next word
 nnoremap <C-H> b
 nnoremap <C-L> w
@@ -190,7 +193,7 @@ inoremap <silent><expr> <Tab>
       \ coc#refresh()
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <Space> pumvisible() ? "\<C-x>" : "\<Space>"
+" inoremap <expr> <Space> pumvisible() ? "\<C-x>" : "\<Space>"
 inoremap <expr> <CR> pumvisible() ? coc#_select_confirm() : "<CR>"
 "
 " use the following if you don't want to automatically select the first
