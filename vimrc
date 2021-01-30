@@ -188,7 +188,9 @@ inoremap <silent><expr> <Tab>
       \ coc#refresh()
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <Space> pumvisible() ? "\<C-x>" : "\<Space>"
 inoremap <expr> <CR> pumvisible() ? coc#_select_confirm() : "<CR>"
+"
 " use the following if you don't want to automatically select the first
 " suggested option
 " inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "<CR>"
