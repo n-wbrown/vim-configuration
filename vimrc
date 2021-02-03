@@ -43,6 +43,10 @@ autocmd Filetype javascript,javascriptreact,typescript,typescriptreact,html,json
 " t:var - local to tab.
 " v:var - Predefined by Vim.
 
+" netrw settings
+let g:netrw_liststyle=1
+" let g:netrw_banner=0
+let g:netrw_sort_options="i"
 
 " for managing long strings of text and text wrapping
 let mapleader = "\\"
