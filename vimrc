@@ -157,7 +157,9 @@ set ttimeoutlen=1	" wait up to 100ms after Esc for special key
 syntax on
 set number
 " necessary for tmux
-set ttymouse=xterm2
+if !has('nvim')
+    set ttymouse=xterm2
+endif
 set mouse=a 
 
 set hlsearch
