@@ -15,9 +15,15 @@ set backspace=indent,eol,start
 set ignorecase
 set smartcase
 
-"Aut\omatically detect and reload a file when it is altered by another program
+"Automatically detect and reload a file when it is altered by another program
 set autoread
-set cursorline
+" For highlighting the line w/ the cursor 
+" set cursorline
+" Use a line cursor in insert mode 
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
 
 
 filetype plugin on 
