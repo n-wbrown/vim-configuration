@@ -25,6 +25,8 @@ let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
 
+" Show invisible characters
+set list
 
 filetype plugin on 
 autocmd Filetype python setlocal
@@ -206,11 +208,11 @@ inoremap <silent><expr> <Tab>
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " inoremap <expr> <Space> pumvisible() ? "\<C-x>" : "\<Space>"
-inoremap <expr> <CR> pumvisible() ? coc#_select_confirm() : "<CR>"
+" inoremap <expr> <CR> pumvisible() ? coc#_select_confirm() : "<CR>"
 "
 " use the following if you don't want to automatically select the first
 " suggested option
-" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "<CR>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "<CR>"
 
 "let g:airline_left_sep=''
 "let g:airline_right_sep=''
@@ -248,3 +250,33 @@ else
   let g:monokai_term_italic = 1
   let g:monokai_gui_italic = 1
 endif
+
+
+" Load a virtual environment
+" Taken from: https://stackoverflow.com/questions/3881534/set-python-virtualenv-in-vim?noredirect=1&lq=1
+
+" Function to activate a virtualenv in the embedded interpreter for
+" omnicomplete and other things like that.
+function LoadVirtualEnv(path)
+    let activate_this = a:path . '/bin/activate_this.py'
+    if getftype(a:path) == "dir" && filereadable(activate_this)
+        python << EOF
+import vim
+activate_this = vim.eval('l:activate_this')
+execfile(activate_this, dict(__file__=activate_this))
+EOF
+    endif
+endfunction
+
+" Load up a 'stable' virtualenv if one exists in ~/.virtualenv
+" let defaultvirtualenv = $HOME . #"/.virtualenvs/stable"
+let defaultvirtualenv = $HOME . "/.venvs/bkg_env"
+
+" Only attempt to load this virtualenv if the defaultvirtualenv
+" actually exists, and we aren't running with a virtualenv active.
+if has("python")
+    if empty($VIRTUAL_ENV) && getftype(defaultvirtualenv) == "dir"
+        call LoadVirtualEnv(defaultvirtualenv)
+    endif
+endif
+
