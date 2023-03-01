@@ -280,6 +280,3 @@ if has("python")
     endif
 endif
 
-" context.vim settings
-packadd context.vim
-let g:context_enabled = 1
