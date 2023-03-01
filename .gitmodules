@@ -22,6 +22,3 @@
 [submodule "pack/my-plugins/opt/vim-airline-themes"]
 	path = pack/my-plugins/opt/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "pack/my-plugins/opt/context.vim"]
-	path = pack/my-plugins/opt/context.vim
-	url = https://github.com/wellle/context.vim.git
