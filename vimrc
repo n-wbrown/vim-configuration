@@ -163,7 +163,7 @@ set ttimeout		" time out for key codes
 set ttimeoutlen=1	" wait up to 100ms after Esc for special key
 
 syntax on
-set number relativenumber
+set number
 " necessary for tmux
 if !has('nvim')
     set ttymouse=xterm2
@@ -279,3 +279,4 @@ if has("python")
         call LoadVirtualEnv(defaultvirtualenv)
     endif
 endif
+
