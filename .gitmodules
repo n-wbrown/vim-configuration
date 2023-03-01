@@ -2,7 +2,7 @@
 	path = pack/my-plugins/opt/vim-monokai-1
 	url = https://github.com/sickill/vim-monokai.git
 [submodule "pack/my-plugins/start/python-syntax"]
-	path = pack/my-plugins/start/python-syntax
+	path = pack/my-plugins/opt/python-syntax
 	url = https://github.com/vim-python/python-syntax.git
 [submodule "pack/my-plugins/start/vim-nefertiti"]
 	path = pack/my-plugins/start/vim-nefertiti
@@ -22,3 +22,6 @@
 [submodule "pack/my-plugins/opt/vim-airline-themes"]
 	path = pack/my-plugins/opt/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "pack/my-plugins/start/nvim-treesitter"]
+	path = pack/my-plugins/opt/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
