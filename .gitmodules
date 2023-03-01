@@ -25,3 +25,6 @@
 [submodule "pack/my-plugins/start/nvim-treesitter"]
 	path = pack/my-plugins/opt/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+[submodule "pack/my-plugins/opt/nvim-treesitter-context"]
+	path = pack/my-plugins/opt/nvim-treesitter-context
+	url = https://github.com/nvim-treesitter/nvim-treesitter-context.git

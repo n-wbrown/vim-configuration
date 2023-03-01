@@ -2,7 +2,10 @@ au BufNewFile,BufRead *.ts     setf typescript
 au BufNewFile,BufRead *.tsx    setf typescriptreact
 au BufNewFile,BufRead *.jsx    setf javascriptreact
 packadd python-syntax
-packadd nvim-treesitter
+if has('nvim')
+  packadd nvim-treesitter
+  packadd nvim-treesitter-context
+endif
 
 
 set autoindent
