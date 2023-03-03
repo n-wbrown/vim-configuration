@@ -1,6 +1,6 @@
 {
+
   "typescript.suggest.completeFunctionCalls": false,
-  "javascript.suggest.completeFunctionCalls": false,
   "jedi.enable": true,
   "jedi.startupMessage": true,
   "jedi.markupKindPreferred": "plaintext",
