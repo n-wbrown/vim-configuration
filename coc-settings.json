@@ -2,7 +2,7 @@
   "typescript.suggest.completeFunctionCalls": false,
   "javascript.suggest.completeFunctionCalls": false,
   "jedi.enable": true,
-  "jedi.startupMessage": false,
+  "jedi.startupMessage": true,
   "jedi.markupKindPreferred": "plaintext",
   "jedi.trace.server": "off",
   "jedi.jediSettings.autoImportModules": [],
@@ -63,5 +63,5 @@
         "N": "hint"
       }
     }
-  },
+  }
 }
