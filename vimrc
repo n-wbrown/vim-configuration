@@ -5,6 +5,7 @@ packadd python-syntax
 if has('nvim')
   packadd nvim-treesitter
   packadd nvim-treesitter-context
+  packadd indent-blankline.nvim
 endif
 
 

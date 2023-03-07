@@ -28,3 +28,6 @@
 [submodule "pack/my-plugins/opt/nvim-treesitter-context"]
 	path = pack/my-plugins/opt/nvim-treesitter-context
 	url = https://github.com/nvim-treesitter/nvim-treesitter-context.git
+[submodule "pack/my-plugins/opt/indent-blankline.nvim"]
+	path = pack/my-plugins/opt/indent-blankline.nvim
+	url = https://github.com/lukas-reineke/indent-blankline.nvim.git
