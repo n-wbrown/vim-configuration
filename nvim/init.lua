@@ -32,7 +32,8 @@ require'nvim-treesitter.configs'.setup {
         disable = { "c", "rust" },
         -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
         disable = function(lang, buf)
-            local max_filesize = 100 * 1024 -- 100 KB
+            -- local max_filesize = 100 * 1024 -- 100 KB
+            local max_filesize = 300 * 1024 -- 100 KB
             local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
             if ok and stats and stats.size > max_filesize then
                 return true
@@ -150,4 +151,5 @@ require("indent_blankline").setup {
     show_current_context = true,
     show_current_context_start = true,
     space_char_blankline = " ",
+    show_current_context_start = true,
 }
