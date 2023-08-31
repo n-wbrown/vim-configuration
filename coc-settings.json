@@ -1,8 +1,8 @@
 {
+
   "typescript.suggest.completeFunctionCalls": false,
-  "javascript.suggest.completeFunctionCalls": false,
   "jedi.enable": true,
-  "jedi.startupMessage": false,
+  "jedi.startupMessage": true,
   "jedi.markupKindPreferred": "plaintext",
   "jedi.trace.server": "off",
   "jedi.jediSettings.autoImportModules": [],
@@ -30,7 +30,7 @@
     "venv"
   ],
   "diagnostic-languageserver.filetypes": {
-    "python": "flake8",
+    "python": "flake8"
   },
   "diagnostic-languageserver.linters": {
     "flake8": {
@@ -63,5 +63,5 @@
         "N": "hint"
       }
     }
-  },
+  }
 }

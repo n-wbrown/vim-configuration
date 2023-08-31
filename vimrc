@@ -1,6 +1,12 @@
 au BufNewFile,BufRead *.ts     setf typescript 
 au BufNewFile,BufRead *.tsx    setf typescriptreact
 au BufNewFile,BufRead *.jsx    setf javascriptreact
+packadd python-syntax
+if has('nvim')
+  packadd nvim-treesitter
+  packadd nvim-treesitter-context
+  packadd indent-blankline.nvim
+endif
 
 
 set autoindent
@@ -195,6 +201,7 @@ let g:python_highlight_indent_errors = 0
 let g:python_highlight_space_errors = 0
 
 " COC configuration - copied from COC wiki 
+" let g:loaded_python3_provider = 0
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -229,7 +236,6 @@ if has("gui_running")
    set guioptions-=L
 endif
 
-
 " echo expand('<sfile>:p:h:h')
 let local_settings_file = expand('<sfile>:p:h') . '/local_settings.vim'
 
@@ -255,27 +261,27 @@ endif
 " Load a virtual environment
 " Taken from: https://stackoverflow.com/questions/3881534/set-python-virtualenv-in-vim?noredirect=1&lq=1
 
-" Function to activate a virtualenv in the embedded interpreter for
-" omnicomplete and other things like that.
-function LoadVirtualEnv(path)
-    let activate_this = a:path . '/bin/activate_this.py'
-    if getftype(a:path) == "dir" && filereadable(activate_this)
-        python << EOF
-import vim
-activate_this = vim.eval('l:activate_this')
-execfile(activate_this, dict(__file__=activate_this))
-EOF
-    endif
-endfunction
-
-" Load up a 'stable' virtualenv if one exists in ~/.virtualenv
-" let defaultvirtualenv = $HOME . #"/.virtualenvs/stable"
-let defaultvirtualenv = $HOME . "/.venvs/bkg_env"
-
-" Only attempt to load this virtualenv if the defaultvirtualenv
-" actually exists, and we aren't running with a virtualenv active.
-if has("python")
-    if empty($VIRTUAL_ENV) && getftype(defaultvirtualenv) == "dir"
-        call LoadVirtualEnv(defaultvirtualenv)
-    endif
-endif
+" " Function to activate a virtualenv in the embedded interpreter for
+" " omnicomplete and other things like that.
+" function LoadVirtualEnv(path)
+"     let activate_this = a:path . '/bin/activate_this.py'
+"     if getftype(a:path) == "dir" && filereadable(activate_this)
+"         python << EOF
+" import vim
+" activate_this = vim.eval('l:activate_this')
+" execfile(activate_this, dict(__file__=activate_this))
+" EOF
+"     endif
+" endfunction
+" 
+" " Load up a 'stable' virtualenv if one exists in ~/.virtualenv
+" " let defaultvirtualenv = $HOME . #"/.virtualenvs/stable"
+" let defaultvirtualenv = $HOME . "/.venvs/bkg_env"
+" 
+" " Only attempt to load this virtualenv if the defaultvirtualenv
+" " actually exists, and we aren't running with a virtualenv active.
+" if has("python")
+"     if empty($VIRTUAL_ENV) && getftype(defaultvirtualenv) == "dir"
+"         call LoadVirtualEnv(defaultvirtualenv)
+"     endif
+" endif
